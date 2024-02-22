@@ -1,3 +1,5 @@
-export class Page {}
+export class Page {
+    
+}
 
 export default new Page();

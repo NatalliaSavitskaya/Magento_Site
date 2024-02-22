@@ -127,7 +127,8 @@ export const config = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ['spec',['allure', {
         outputDir: 'allure-results',
-        useCucumberStepsReporter:true}]],
+        useCucumberStepReporter: true
+    }]],
 
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
@@ -257,7 +258,7 @@ export const config = {
      * @param {object}             context          Cucumber World object
      */
     afterStep: async function (step, scenario, result, context) {
-        if (result.error){
+        if (result.error) {
             await browser.takeScreenshot();
         }
     },
